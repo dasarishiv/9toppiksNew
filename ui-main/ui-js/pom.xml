@@ -152,7 +152,7 @@
 	                            <configuration>
 	                                <executable>java</executable>
 	                                <arguments>
-	                                    <argument>-v</argument>                                                                        
+	                                    <argument>-version</argument>                                                                        
 	                                </arguments>
 	                            </configuration>
 	                            <goals>
