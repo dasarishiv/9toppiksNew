@@ -7,18 +7,32 @@
 
     <fileSets>
         <fileSet>
-            <directory>${basedir}/src/main/resources/js</directory>
-            <outputDirectory>js</outputDirectory>
+            <directory>${basedir}/dist/bower_components</directory>
+            <outputDirectory>bower_components</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/src/main/resources/css</directory>
-            <outputDirectory>css</outputDirectory>
+            <directory>${basedir}/dist/scripts</directory>
+            <outputDirectory>scripts</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
-        </fileSet>  
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/dist/images</directory>
+            <outputDirectory>images</outputDirectory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+		<fileSet>
+            <directory>${basedir}/dist/styles</directory>
+            <outputDirectory>styles</outputDirectory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>    
     </fileSets>      
 </assembly>
