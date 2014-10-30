@@ -5,7 +5,7 @@ Before installing Yeoman, you will need the following:
 •	npm (which comes bundled with Node) v1.4.3+
 •	git
 
-for checking the version:
+For checking the version:
 $ node --version && npm --version
 
 If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the .msi for Windows or .pkg for Mac from the NodeJS website.
