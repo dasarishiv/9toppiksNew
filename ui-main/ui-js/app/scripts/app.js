@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('uiJsApp', []);
+  .module('9toppiksApp', []);

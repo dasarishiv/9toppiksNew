@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name uiJsApp.controller:MainCtrl
+ * @name 9toppiksApp.controller:UserCtrl
  * @description
- * # MainCtrl
- * Controller of the uiJsApp
+ * # UserCtrl
+ * Controller of the 9toppiksApp
  */
 angular.module('9toppiksApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('UserCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
