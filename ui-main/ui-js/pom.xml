@@ -100,7 +100,11 @@
                             <goal>grunt</goal>
                         </goals>
                         <configuration>
-                            <arguments>--force build</arguments>
+                        	<!--Do not remove the force only change 2nd word "build/serve/test" as per requirement -->
+                           <!--"build": for generate files and build the zip file  -->
+                           <!--"serve": for see the app in browser  -->
+                           <!--"test": for see the app in browser  -->
+                            <arguments>--force serve</arguments>
                         </configuration>
                     </execution>
 
