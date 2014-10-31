@@ -1,0 +1,70 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+$white:                #fff;
+
+$black:                #000;
+$black-light:          lighten($black, 26%); //#424242
+$black-light:          lighten($black, 26%); //#424242
+$brand-primary-dark:   darken($brand-primary, 5%);
+
+
+$facebook:              #5389da;
+$twitter:               #4fc3ff;
+$googleplus:            #e15e3b;
+$linkedin:              #3d93bf;
+$gmail:                 $gray-light;
+        
+$dvd:                   $brand-primary;
+$movie:                 #F9AE37;
+$music:                 #76608A;
+$certificate:           #d90073;
+$book:                  #01abaa;
+$traning:               #fa6801;
+
+$custom-gray:           lighten($black, 72%); //#e0e0e0
+$custom-gray-light:     lighten($black, 58%); //#959595
+$custom-gray-lighter:   #f2f3f4;
+
+$gray-extra-light:      lighten($black, 88%); //#e0e0e0
+$gray-extra-lighter:    lighten($black, 96%); // #f5f5f5
+
+
+$timeline-bg:           $custom-gray-lighter;
+$timeline-border-color: $custom-gray-lighter;
+$timeline-post-url-bg:     $gray-lighter;
+
+$brand-inverse:         #6dd374;
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-xlarge-vertical:    16px;
+$padding-xlarge-horizontal:  26px;
+
+$padding-xxlarge-vertical:    26px;
+$padding-xxlarge-horizontal:  35px;
+
+$border-radius-xlarge:      30px;
+
+
+$footer-bg:            $gray-extra-lighter;
+
+//== Tabs
+
+$profile-tabs-active-link-hover-bg:             $custom-gray-lighter;
+$profile-tabs-active-link-hover-color:          $black-light;
+$profile-tabs-active-link-hover-border-color:   $black-light;
+
+//== border radius
+
+$border-radius-round: 50%;
+
+
+

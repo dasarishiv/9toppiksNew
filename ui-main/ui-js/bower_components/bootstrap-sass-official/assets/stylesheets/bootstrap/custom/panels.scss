@@ -1,0 +1,45 @@
+//
+// Panels Sizes
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  &.panel-sm{
+      .panel-heading {
+          padding:0 8px;
+       }
+    
+  }
+}
+
+// Movie ticket right pain block
+//
+// 
+//.right-pain-block{
+  //  color:$gray-light;
+//}
+.block-heading{
+    line-height:40px;
+    margin-bottom:15px;
+    border-bottom:1px solid $gray-lighter;
+}
+.header-block{
+    line-height:30px;
+    margin-bottom:15px;
+    h3{
+        margin:0;
+        display:inline-block;
+    }
+    a{
+        float:right;
+        text-decoration:underline;
+        color:$brand-primary;
+        &:hover{
+            color:darken($brand-primary, 20%);
+        }
+    }
+}
+
+
+

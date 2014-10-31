@@ -1,0 +1,144 @@
+//
+// Checkbox & Radio
+// --------------------------------------------------
+
+.checkbox,
+.radio {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  @include transition(color .25s linear);
+
+  input {
+    outline: none !important;
+    display:none;
+  }
+  label{
+      padding-left:0;
+  }
+
+  // Replace icons
+  // --------------------------------------------------
+  .icons {
+    color: $gray-lighter;
+    display: block;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    @include transition(color .25s linear);
+
+    .first-icon,
+    .second-icon {
+    	display: inline-table;
+      position: absolute;
+      left: 0;
+      top: 0;
+      //background-color: $brand-primary;
+      @include opacity(1);
+    }
+    .second-icon {
+      @include opacity(0);
+    }
+  }
+
+  // Alternate States
+  // --------------------------------------------------
+
+  // Hover State
+  &:hover {
+  	color: $gray-light;
+   @include transition(color .25s linear);
+
+    .first-icon {
+      @include opacity(0);
+    }
+    .second-icon {
+      @include opacity(1);
+    }
+  }
+
+  // Checked State
+  &.checked {
+    color: $link-color;
+
+    .first-icon {
+      @include opacity(0);
+    }
+    .second-icon {
+      @include opacity(1);
+      color: $link-color;
+     @include transition(color .25s linear);
+    }
+  }
+
+  // Disabled state
+  &.disabled {
+    cursor: default;
+    color: $custom-gray-light;
+
+    .icons {
+      color: $gray-lighter;
+    }
+    .first-icon {
+      @include opacity(1);
+    }
+    .second-icon {
+      @include opacity(0);
+    }
+    &.checked {
+      .icons {
+        color: $gray-lighter;
+      }
+      .first-icon {
+        @include opacity(0);
+      }
+      .second-icon {
+        @include opacity(1);
+        color: $gray-lighter;
+      }
+    }
+  }
+
+  // Alternate Color
+  // --------------------------------------------------
+
+  // Primary
+  &.primary {
+    .icons {
+      color: $brand-primary;
+    }
+    // Checked State
+    &.checked {
+      color: $link-color;
+
+      .icons {
+        color: $white;
+      }
+    }
+    // Disabled state
+    &.disabled {
+      cursor: default;
+      color: $gray-light;
+
+      .icons {
+        color: $gray-light;
+      }
+      &.checked {
+        .icons {
+          color: $gray-light;
+        }
+      }
+    }
+  }
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: 10px;
+}

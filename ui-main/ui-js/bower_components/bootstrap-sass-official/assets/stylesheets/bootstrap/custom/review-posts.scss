@@ -1,0 +1,284 @@
+// Reviews post list
+//
+//
+
+.post-listview {
+
+    .post-block {
+        //border-left: 2px solid $white;
+        //border-radius: $border-radius-base;
+        //margin-bottom: 15px;
+        padding: 20px;
+        color: $gray-light;
+        position: relative;
+        display: table;
+        @include transition(.25s linear);
+
+        &:hover {
+            //border-left-color: $brand-primary;
+            .post-block-job_links {
+                opacity: 1;
+            }
+
+            .post-controls {
+                opacity: 1;
+            }
+
+            &:before {
+                background-color: $brand-primary;
+            }
+        }
+
+        &:before {
+            background-color: $white;
+            position: absolute;
+            content: "";
+            top: 20px;
+            bottom: 20px;
+            left: 0;
+            width: 4px;
+            @include transition(.25s linear);
+        }
+
+        &:after {
+            height: 1px;
+            background-color: $gray-lighter;
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 20px;
+            right: 20px;
+        }
+
+        .post-controls {
+            position: absolute;
+            right: 20px;
+            z-index: 1;
+            opacity: 0;
+            @include transition(.25s linear);
+            a {
+                color: $gray-light;
+
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+
+        .rating-block {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            height: 110px;
+            position: absolute;
+            margin-right: 0;
+
+            .star-rating {
+                text-align: center;
+                margin-top: 80px;
+            }
+        }
+
+        .ratings-upanddown {
+            position: absolute;
+            text-align: center;
+            width: 40px;
+
+            a {
+                display: block;
+                font-size: 24px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:focus,
+                &:active {
+                    color: $brand-primary;
+                }
+            }
+
+            span {
+                display: block;
+                font-weight: 700;
+                //margin: 0px 0;
+            }
+        }
+
+        .post-block-img {
+            overflow: hidden;
+            text-align: center;
+            //img{
+            //  max-height:110px;
+            //}
+        }
+
+        .post-block-content {
+            position: relative;
+            margin-left: 125px;
+
+            h3 {
+                margin-top: 0;
+                 i{
+                     margin-right:10px;
+                 }
+            }
+
+            p {
+                border-top: 1px solid $gray-lighter;
+                padding-top: 15px;
+                margin-top: 15px;
+            }
+        }
+
+        .post-block-links {
+            a {
+                border-left: 1px solid $gray-lighter;
+                padding: 0 10px;
+
+                &:first-child {
+                    padding-left: 0;
+                    border-left: 1px solid transparent;
+                }
+
+                &:last-child {
+                    text-decoration: none;
+                    color: $custom-gray-light;
+                }
+
+                > i {
+                    position: relative;
+                    top: -2px;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .post-block-job_links {
+            opacity: 0;
+            @include transition(.25s linear);
+
+            a {
+                text-decoration: none;
+                color: $custom-gray-light;
+                border-left: 1px solid $gray-lighter;
+                padding: 0 10px;
+
+                i {
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
+
+        .check-mark {
+            background-color: $brand-inverse;
+            color: $white;
+            width: 9px;
+            height: 9px;
+            line-height: 9px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+
+            i {
+                font-size: 7px;
+                position: relative;
+                top: -2px;
+            }
+        }
+
+        .media-display-area {
+            margin-right: 100px;
+
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(min-width:$screen-xs-min){
+    .post-block-img {
+            float: left;
+            width: 50px;
+            height:50px;
+            margin-bottom:15px;
+        }
+    .post-listview {
+        .post-block {
+            .post-block-content {
+                margin-left:60px;
+            }
+
+            .rating-block {
+                display: block;
+                left: 19px;
+                top: 75px;
+                width: 50px;
+                background-color:$white;
+            }
+
+            .ratings-upanddown {
+                left: -54px;
+                top: 60px;
+                a{
+                    color:$gray-light;
+                }
+                span {
+                    color:$gray-light;
+                }
+            }
+        }
+    }
+    
+            
+    .panel-heading{
+        .rating-block{
+            display:inline-block;
+        }
+    }
+}
+@media (min-width: $screen-xs-min) and (max-width: $screen-st-max) {
+
+}
+@media(min-width:$screen-sm-min){
+    .post-block-img {
+            float: left;
+            width: 110px;
+            margin-bottom:0;
+            height:110px;
+    }
+    .post-listview {
+        .post-block {
+            .post-block-content {
+                margin-left: 125px;
+            }
+
+            .rating-block {
+                left: 20px;
+                top:20px;
+                width: 110px;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+                height: 110px;
+                position: absolute;
+                margin-right: 0;
+            }
+
+            .ratings-upanddown {
+                left: -188px;
+                top: 0;
+                a{
+                    color:$gray-light;
+                }
+                span {
+                    color:$gray-light;
+                }
+            }
+        }
+    }
+
+        
+        
+    }

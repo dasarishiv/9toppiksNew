@@ -1,0 +1,223 @@
+﻿// Tabs  Movie Topic
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+    &.movie-topic{
+    border-bottom: 2px solid $gray-lighter;
+    
+    > li {
+        // Make the list-items overlay the bottom border
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        
+        // Actual tabs (as links)
+        > a {
+           border:0;
+           color:$black-light;
+           font-weight:700;
+            &:hover {
+                border-bottom-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+                background-color: $nav-tabs-active-link-hover-bg;
+            }
+        }
+        // Active state, and its :hover to override normal :hover
+        &.active {
+            border-bottom-color: $brand-primary;
+        }
+        &.hasSub{
+            i{
+                display:none;
+                position: relative;
+                top: -2px;
+            }
+            &.shown{
+                a{
+                    cursor:pointer !important;
+                }
+                i{
+                display:inline-block;
+                }
+            }
+        }
+
+        &.active > a {
+            border:0;
+            color:$brand-primary;
+            //font-weight:700;
+            &:hover,
+            &:focus {
+                color: $brand-primary;
+                background-color: $nav-tabs-active-link-hover-bg;
+                cursor: default;
+                outline: none;
+            }
+        }
+    }
+    }
+}
+
+// Tabs  Profile
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+    &.profile{
+    border-bottom: 0;
+    > li {
+        
+        // Actual tabs (as links)
+        > a {
+           border:0;
+           border-radius:0;
+           line-height:60px;
+            &:hover {
+                border-bottom-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+                background-color: $profile-tabs-active-link-hover-bg;
+            }
+        }
+        // Active state, and its :hover to override normal :hover
+        &.active {
+            border-bottom-color: $profile-tabs-active-link-hover-border-color;
+        }
+
+            &.active > a {
+                border:0;
+                border-radius:0;
+                &,
+                &:hover,
+                &:focus {
+                    color: $profile-tabs-active-link-hover-color;
+                    background-color: $profile-tabs-active-link-hover-bg;
+                    cursor: default;
+                    outline: none;
+                }
+            }
+    }
+    }
+}
+
+// Profile Tabs
+//
+// 
+
+.profile-tabs{
+    background-color:$timeline-bg;
+}
+.profile-nav-tabs-bg{
+    background-color:$white;
+    &.affix{
+        left: 0;
+        right: 0;
+        top: 47px;
+        z-index: 2;
+        }
+}
+
+
+.nav-tabs{
+    &.nav-pills{
+        li {
+            a{  
+                border:0;
+                color:$black-light;
+                &:hover,
+                &:focus{
+                    background-color:transparent;
+                    border:0;
+                }
+            }
+            &.active{
+                a{
+                     background-color: transparent;
+                     color: $brand-primary;
+                     //font-weight:700;
+                    &:hover,
+                    &:focus{
+                        background-color: transparent;
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-xs-min) {
+    
+    .tab{
+        .navbar-toggle{
+            background-color:$brand-inverse;
+            color:$white;
+            float: none;
+            margin-right: 0;
+            padding: 6px 10px;
+            top: -5px;
+        }
+    }
+
+    .profile-tabs{
+        .tab{
+            .navbar-toggle{
+               top: 0;
+            }
+        }
+    }
+    .nav-tabs {
+        &.collapse{
+            display:none;
+            &.in{
+                display:block;
+            }
+        }
+        > li{
+            display:block;
+            float:none;
+        }
+        &.movie-topic > li{
+            margin-bottom:0;
+        }
+    }
+    .nav-pills.nav-tabs > li {
+        display: inline-block;
+    }
+    
+}
+@media(min-width:$screen-sm-min){
+    .nav-tabs {
+        &.profile {
+            > li {
+                > a {
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        &.collapse {
+            display: block;
+        }
+
+        > li {
+            float: left;
+        }
+
+        &.movie-topic > li {
+            margin-bottom: -2px;
+        }
+    }
+    }
+
+@media(min-width:$screen-md-min) {
+    .nav-tabs {
+        &.profile {
+            > li {
+                > a {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}
+

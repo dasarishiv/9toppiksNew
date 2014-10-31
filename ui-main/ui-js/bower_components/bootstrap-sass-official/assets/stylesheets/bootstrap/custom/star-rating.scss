@@ -1,0 +1,311 @@
+﻿/*!
+ * $copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * $version 2.5.0
+ *
+ * A simple yet powerful JQuery star rating plugin that allows rendering
+ * fractional star ratings and supports Right to Left (RTL) input.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ */
+
+
+
+/*
+ * Stars
+ */
+.rating-gly {
+    font-family: 'Glyphicons Halflings';
+}
+.rating-gly-star {
+    font-family: 'Glyphicons Halflings';
+    padding-left: 2px;
+    .rating-stars:before {
+        padding-left: 2px;
+    }
+}
+
+
+
+.rating-lg .rating-gly-star, 
+.rating-lg .rating-gly-star .rating-stars:before {
+    padding-left: 4px;
+}
+
+.rating-xl .rating-gly-star, 
+.rating-xl .rating-gly-star .rating-stars:before {
+    padding-left: 2px;
+}
+
+.rating-active {
+    cursor: default;
+}
+
+.rating-disabled {
+    cursor: not-allowed;
+}
+
+.rating-uni {
+    font-size: 1.2em;
+    margin-top: -5px;
+}
+
+.rating-container {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #d7d7d7;
+    overflow: hidden;
+    line-height:30px;
+    &:before {
+        content: attr(data-content);
+    }
+    .rating-stars {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #efca3b;
+        transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+    }
+
+    .rating-stars:before {
+        content: attr(data-content);
+        //text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+
+
+
+.rating-container-rtl {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    color: #fde16d;
+    &:before {
+        content: attr(data-content);
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+    }
+    .rating-stars {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #e3e3e3;
+        transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+        &:before {
+            content: attr(data-content);
+        }
+    }       
+}
+
+/**
+ * Rating sizes
+ */
+.rating-xl {
+    font-size: 24px;
+}
+
+.rating-lg {
+    font-size: 20px;
+}
+
+.rating-md {
+    font-size: 18px;
+}
+
+.rating-sm {
+    font-size: 16px;
+}
+
+
+
+/**
+ * Clear rating button
+ */
+.star-rating .clear-rating, 
+.star-rating-rtl .clear-rating {
+    color: #aaa;
+    cursor: not-allowed;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60%;
+}
+
+.clear-rating-active {
+    cursor: pointer !important;
+}
+
+.clear-rating-active:hover {
+    color: #843534;
+}
+
+.star-rating .clear-rating {
+    padding-right: 5px;
+}
+
+/**
+ * Caption
+ */
+.star-rating .caption, 
+.star-rating-rtl .caption {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.star-rating .caption {
+    //float: left;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.star-rating-rtl .caption {
+    padding-right: 5px;
+}
+.caption .label-circle{
+    background-color: $brand-primary;
+    color: $white;
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    font-size:11px;
+    text-align:center;
+    line-height:30px;
+    display: inline-block;
+    &:hover{
+        text-decoration:none;
+    }
+}
+@media (min-width: $screen-xs-min) and (max-width: $screen-st-max) {
+    .review-rating{
+        text-align:center;
+        > span{
+            display:none;
+        }
+        .rating-block{
+           margin-right:0;
+           margin-bottom:0;
+           display:inline-block;
+           &:first-child{
+                padding-bottom:15px;
+                padding-right:10px;
+                margin-right:10px;
+                //margin-bottom:15px;
+                border-right:1px solid $gray-lighter;
+           }
+           .star-rating{
+               text-align:center;
+               .caption{
+                   display:block;
+                   margin-right:0;
+               }
+           }
+        }
+    }
+    .rating-xs {
+        font-size: 9px;
+    }
+
+}
+@media(min-width:$screen-xs-min) {
+    /*.review-rating{
+        > span{
+            display:none;
+        }
+        .rating-block{
+           margin-right:0;
+           margin-bottom:0;
+           display:inline-block;
+           &:first-child{
+                padding-bottom:15px;
+                padding-right:10px;
+                margin-right:10px;
+                //margin-bottom:15px;
+                border-right:1px solid $gray-lighter;
+           }
+           .star-rating{
+               text-align:center;
+               .caption{
+                   display:block;
+                   margin-right:0;
+               }
+           }
+        }
+    }
+    .rating-xs {
+        font-size: 9px;
+    }*/
+    
+}
+@media(min-width:$screen-st-min) {
+    .review-rating {
+        .rating-block {
+            .rating-sm{
+                font-size:12px;
+            }
+            .caption {
+                font-size:11px;
+                .label-circle{
+                    height: 24px;
+                    line-height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+        > span{margin: 0;}
+    }
+}
+@media(min-width:$screen-st-min) {
+    .rating-block {
+        display: inline-block;
+    }
+    .review-rating {
+        > span {
+            display: inline-block;
+            margin:0 5px;
+        }
+
+        .rating-block {
+            margin-right: 5px;
+            display: inline-block;
+
+            &:first-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &:first-child {
+                margin-right: 0;
+            }
+            .rating-sm{
+                font-size:16px;
+            }
+            .caption{
+                margin-right:0;
+                font-size:12px;
+                > span{
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:$screen-md-min) {
+    .rating-xs {
+        font-size: 12px;
+    }
+}
