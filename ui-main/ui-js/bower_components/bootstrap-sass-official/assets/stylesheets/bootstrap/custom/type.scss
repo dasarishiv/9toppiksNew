@@ -1,0 +1,160 @@
+﻿// Global styles 
+body{
+    @include transition(.25s);
+}
+li { list-style:none;}
+a{outline:none;}
+.hr{
+    height:1px;
+    background-color:$gray-lighter;
+    display:block;
+    margin:15px 0;
+    &.hr-md{
+        height:3px;
+    }
+}
+
+.bold{
+    font-weight:700;
+}
+.border-none{
+    border:0;
+}
+.vertical-anchor-diveder{
+    color:$gray-light;
+    display:inline-block;
+}
+
+// Scroll 
+
+.block-scroll{
+    height:210px;
+    overflow-y:auto;
+}
+
+// Header and footer reset
+header{
+    //height:138px;
+    //margin-bottom:20px;
+    background-color:$white;
+}
+.gray-light{color:$gray-light;}
+
+.letter-space-sm{
+    letter-spacing:-2px;
+}
+
+header {
+    @media (min-width: $screen-xs-min) {
+        height: 103px;
+    }
+    @media (min-width: $screen-sm-min) {
+        height: 125px;
+    }
+    @media (min-width: $screen-md-min) {
+        height: 125px;
+    }
+    @media (min-width: $screen-lg-min) {
+        height: 125px;
+    }
+}
+
+.footer {
+  //position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: $footer-bg;
+  line-height:60px;
+  p{
+      margin-bottom:0;
+  }
+}
+
+
+// Page header
+// -------------------------
+
+@media(min-width:$screen-xs-min){
+    .page-header{
+  .page-header-right{
+      width:100%;
+      float:none;
+      margin-top:15px;
+   }
+  }
+}
+@media(min-width:$screen-sm-min){
+    .page-header{
+  .page-header-right{
+      float:right;
+      width:auto;
+      margin-top:0;
+   }
+  }
+}
+.page-header {
+    margin:0 0 20px 0;
+    padding-bottom:20px;
+    figure{
+        display:inline-block;
+        vertical-align:middle;
+        line-height:35px;
+        width:35px;
+        margin-right:10px;
+        img{
+            max-height:35px;
+        }
+    }
+  h1{
+      display:inline-block;
+      vertical-align:middle;
+      margin:0 20px 0 0;
+   }
+  
+}
+.right-filter{
+    width:30%;
+    display:inline-block;
+    text-align:right;
+    span{
+        display:inline-block;
+        vertical-align:middle;
+    }
+    select{
+        width:150px;
+        display:inline-block;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .right-filter {
+        width: 40%;
+        text-align: right;
+    }
+}
+
+.text-lg{
+    font-size:16px;
+    line-height: 18px;
+}
+.text-small{
+    font-size:12px;
+    line-height: 14px;
+}
+.form-control {
+    .textarea-sm &{
+        height: 50px;
+    }
+
+    .textarea-lg &{
+        height: 100px;
+    }
+}
+
+.help-block{
+    font-style:italic;
+    color:$gray-light;
+    font-size:$font-size-small;
+}

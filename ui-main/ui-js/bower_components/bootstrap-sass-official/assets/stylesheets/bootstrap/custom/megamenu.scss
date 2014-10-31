@@ -1,0 +1,165 @@
+/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * $geedmo - Licensed under the MIT license
+ */
+
+//-----------------------------
+//  megamenu Styles
+//-----------------------------
+
+.megamenu {
+    // reset positions
+    .nav, .collapse, .dropup, .dropdown {
+        position: static;
+    }
+    // propagate menu position under container for fw navbars
+    .container {
+        position: relative;
+    }
+    // by default aligns menu to left
+    .dropdown-menu {
+        left: auto;
+        padding: 0;
+    }
+    // Content with padding
+    .megamenu-content {
+        padding: 0;
+    }
+
+    .megamenu-content-body {
+        padding: 10px;
+
+        .nav-tabs-justified {
+            width: 120px;
+            float: left;
+            line-height: 20px;
+
+            > li > a {
+                // Override margin from .nav-tabs
+                margin-right: 0;
+                border-radius: 0;
+                color: $black-light;
+                border: 1px solid transparent;
+                text-transform:uppercase;
+                font-weight:700;
+                &:hover{
+                    border-color: $gray-extra-lighter;
+                    background-color: $gray-extra-lighter;
+                    color:$brand-primary;
+                }
+            }
+
+            > .active > a,
+            > .active > a:hover,
+            > .active > a:focus {
+                //border-color: $gray-extra-lighter;
+                //background-color: $gray-lighter;
+                border-color: $gray-extra-lighter;
+                background-color: $gray-extra-lighter;
+                color:$brand-primary;
+            }
+            
+
+            @media (min-width: $screen-sm-min) {
+                > li > a {
+                    //border-right: 1px solid $nav-tabs-justified-link-border-color;
+                    border: 0;
+                    //border-radius: $border-radius-base  0 0 $border-radius-base;
+                }
+
+                > .active > a,
+                > .active > a:hover,
+                > .active > a:focus {
+                    border-right-color: $nav-tabs-justified-active-link-border-color;
+                }
+            }
+        }
+
+        .tab-content {
+            position: relative;
+            margin-left: 144px;
+        }
+    }
+
+    .megamenu-content-footer {
+        background-color: $gray-extra-light;
+        line-height: 45px;
+        padding: 0 12px;
+
+        a {
+            color: $black-light;
+            padding: 0 12px;
+            font-size: 12px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    // Fullwidth menu
+    .dropdown.megamenu-fw .dropdown-menu {
+        left: 0;
+        right: 0;
+    }
+    // Fullwidth menu
+    .dropdown.megamenu-fixed {
+        &:first-child {
+            > a {
+                border-left-color: $brand-primary-dark;
+            }
+        }
+
+        a {
+            border: 1px solid transparent;
+            border-right-color: $brand-primary-dark;
+        }
+        li{
+            a{
+            &:hover{
+                background-color:$brand-primary;
+                color:$white;
+                border-right-color: $brand-primary;
+                }
+            }
+        }
+
+        &.active > a,
+        &.open > a {
+
+            &,
+            &:hover,
+            &:focus {
+                border: 1px solid $brand-primary-dark;
+                border-bottom-color: $white;
+                //border-top-color: $white;
+                z-index: 1001;
+            }
+        }
+
+        .dropdown-menu {
+            max-width: 464px;
+            box-shadow: none;
+            border: 1px solid $brand-primary-dark;
+            margin-top: -1px;
+            border-radius: 0;
+            li a{
+                border-right:$white;
+            }
+                
+        }
+        .more-results{
+            a{
+                text-transform:uppercase;
+                font-weight:700;
+                border:0;
+                color:$black-light;
+                &:hover{
+                    background-color:$white;
+                    color:$brand-primary;
+                }
+            }
+        }
+    }
+}

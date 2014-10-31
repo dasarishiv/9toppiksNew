@@ -1,0 +1,146 @@
+﻿// Buttons
+//
+// Social networking buttons for signup and signin.
+
+
+.btn-round {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include transition(.25s linear);
+    border-radius: $border-radius-round;
+    width: 23px;
+    height: 23px;
+    font-size:14px;
+    line-height:20px;
+
+    &:hover,
+    &:focus {
+        text-decoration:none;
+    }
+    &.btn-lg{
+        @include button-size($btn-padding-large-vertical, 0, $font-size-large, 36px,  $border-radius-round);
+        width:40px;
+    }
+    &.btn-sm {
+      // line-height: ensure proper height of button next to small input
+      @include button-size($btn-padding-small-vertical, $btn-padding-small-horizontal, $font-size-small, $btn-line-height-small, $border-radius-round);
+      width:28px;
+    }
+    &.btn-xs {
+      @include button-size($btn-padding-xs-vertical, $btn-padding-xs-horizontal, $font-size-xs, $btn-line-height-xs, $border-radius-round);
+      width:20px;
+    }
+}
+
+.btn-facebook {
+    @include button-variant($white,  $facebook,  $facebook);
+    //background-color: $facebook;
+    //border-color: $facebook;
+}
+.btn-twitter {
+    @include button-variant($white,  $twitter,  $twitter);
+    //background-color: $twitter;
+    //border-color: $twitter;
+}
+.btn-googleplus {
+    @include button-variant($white,  $googleplus,  $googleplus);
+    //background-color: $googleplus;
+    //border-color: $googleplus;
+}
+.btn-linkedin {
+    @include button-variant($white,  $linkedin,  $linkedin);
+    //background-color: $linkedin;
+    //border-color: $linkedin;
+}
+.btn-gmail {
+    @include button-variant($white,  $gmail,  $gmail);
+    //background-color: $gmail;
+    //border-color: $gmail;
+}
+.btn-gmail,
+.btn-linkedin,
+.btn-googleplus,
+.btn-twitter,
+.btn-facebook{
+    background-image:none;
+    color:$white;
+    i{margin-right:0;}
+    &:active,
+    &:focus,
+    &:hover{
+        color:$white;
+    }
+}
+.social-networks{
+    .btn-lg{
+        border-radius:30px;
+    }
+}
+
+@media(min-width:$screen-xs-min){
+    .social-networks{
+        &.social-networks-horizontal{
+            a{
+                margin-right:10px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        &.social-networks-vertical{
+            a{
+                margin-bottom:10px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}
+@media(min-width:$screen-sm-min){
+    .social-networks{
+        &.social-networks-horizontal{
+            a{
+                margin-right:3px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        &.social-networks-vertical{
+            a{
+                margin-bottom:10px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}
+@media(min-width:$screen-md-min){
+    .social-networks{
+        &.social-networks-horizontal{
+            a{
+                margin-right:10px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        &.social-networks-vertical{
+            a{
+                margin-bottom:10px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}

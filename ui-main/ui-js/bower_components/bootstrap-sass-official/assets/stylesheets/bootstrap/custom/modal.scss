@@ -1,0 +1,85 @@
+﻿// Modal
+//
+// We reset this here because customizing modal for signup and signin. 
+//.modal-header.signin{
+  //  border-bottom:0;
+//}
+.modal-body.signup,
+.modal-body.signin{
+    padding:15px 0;
+    .btn-block,
+    .form-control{
+        border-radius:$border-radius-xlarge;
+    }
+}
+.signin-title{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:20px;
+    span{ font-style:italic;}
+}
+
+
+.modal-footer.signin{
+    margin:0 -30px -10px -30px;
+    border-top:0;
+    position:relative;
+    background-color:$gray-extra-lighter;
+    z-index:2;
+    border-radius: 0 0 6px 6px;
+}
+.modal-subheader{
+    background-color:$gray-extra-lighter;
+    border-bottom:1px solid $gray-extra-light;
+    line-height:39px;
+}
+
+@media(min-width:$screen-xs-min){
+    .vertical-diveder {
+        display:none;
+    }
+    .signin-left-block{
+        padding-right:0;
+        padding-left:0;
+    }
+    .signin-right-block{
+        padding-right:0;
+        padding-left:0;
+        margin-top:15px;
+    }
+}
+@media(min-width:$screen-sm-min){
+    .vertical-diveder{
+        display:block;
+    position:absolute;
+    left:50%;
+    top:15px;
+    bottom:15px;
+    width:1px;
+    background-color:$gray-extra-light;
+    //height:100%;
+    z-index:1;
+    &:before{
+        border-radius: 50%;
+        bottom: 0;
+        content: "or";
+        height: 30px;
+        line-height: 30px;
+        margin: -15px 0 0 -15px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 30px;
+        background-color:$gray-extra-light;
+    }
+}
+    .signin-left-block{
+         padding-left:15px;
+        padding-right:$padding-xxlarge-horizontal;
+    }
+    .signin-right-block{
+        padding-right:15px;
+        padding-left:$padding-xxlarge-horizontal;
+        margin-top:0;
+    }
+}
