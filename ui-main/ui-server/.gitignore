@@ -1,1 +1,11 @@
 /target/
+/src/main/webapp/bower_components/
+/src/main/webapp/images/
+/src/main/webapp/scripts/
+/src/main/webapp/styles/
+/src/main/webapp/views/
+/src/main/webapp/404.html
+/src/main/webapp/favicon.ico
+/src/main/webapp/robots.txt
+/src/main/webapp/.htaccess
+/src/main/webapp/.buildignore

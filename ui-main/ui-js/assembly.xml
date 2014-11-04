@@ -7,32 +7,46 @@
 
     <fileSets>
         <fileSet>
-            <directory>${basedir}/dist/bower_components</directory>
+            <directory>${basedir}/bower_components</directory>
             <outputDirectory>bower_components</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/dist/scripts</directory>
+            <directory>${resource-dir}/scripts</directory>
             <outputDirectory>scripts</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/dist/images</directory>
+            <directory>${resource-dir}/images</directory>
             <outputDirectory>images</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
         </fileSet>
 		<fileSet>
-            <directory>${basedir}/dist/styles</directory>
+            <directory>${resource-dir}/styles</directory>
             <outputDirectory>styles</outputDirectory>
             <includes>
                 <include>**/*.*</include>
             </includes>
-        </fileSet>    
+        </fileSet>
+        <fileSet>
+            <directory>${resource-dir}/views</directory>
+            <outputDirectory>views</outputDirectory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${resource-dir}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>*.*</include>
+            </includes>
+        </fileSet>
     </fileSets>      
 </assembly>

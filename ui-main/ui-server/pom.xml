@@ -5,13 +5,13 @@
 
     <parent>
         <artifactId>ui-main</artifactId>
-        <groupId>com.thalamas</groupId>
+        <groupId>com.swamy</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
-    <groupId>com.thalamas</groupId>
+    <groupId>com.swamy</groupId>
     <artifactId>ui-server</artifactId>
 
     <properties>
@@ -41,6 +41,22 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.4</version>
         </dependency>
 
         <!-- Test Dependencies -->
@@ -178,7 +194,7 @@
 	                        <configuration>
 	                            <artifactItems>
 	                                <artifactItem>
-	                                    <groupId>com.thalamas</groupId>
+	                                    <groupId>com.swamy</groupId>
 	                                    <artifactId>ui-js</artifactId>
 	                                    <version>${project.version}</version>
 	                                    <type>zip</type>
